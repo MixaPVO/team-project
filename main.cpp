@@ -3,7 +3,7 @@
 #include <iostream>
 #include <windows.h>
 #include "retivykh.h"
-#include "Kunshikov.h"
+#include "kunshikov.h"
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
 using namespace std;
 int main() {
