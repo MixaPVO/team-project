@@ -1,0 +1,32 @@
+# --- Результаты компиляции ---
+*.o
+*.obj
+*.exe
+*.out
+*.app
+# --- Библиотеки ---
+*.a
+*.lib
+*.so
+*.so.*
+*.dll
+*.dylib
+# --- Отладочная информация ---
+*.pdb
+*.idb
+*.ilk
+# --- Папки сборки ---
+build/
+Debug/
+Release/
+x64/
+out/
+# --- Служебные файлы IDE ---
+.vs/
+.vscode/
+.idea/
+*.user
+# --- CMake ---
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
