@@ -1,4 +1,5 @@
 #include <iostream>
+#include "kunshikov.h"
 
 /* Вычисление себестоимости. Total - затраты, n - количество единиц */
 void unitCost(int total, int n) {
