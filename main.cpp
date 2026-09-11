@@ -3,10 +3,7 @@
 #include <iostream>
 #include <windows.h>
 #include "retivykh.h"
-// === БЛОК ПОДКЛЮЧЕНИЙ: каждый участник добавляет свой заголовочный файл ===
-// #include "ivanov.h"
-// #include "petrov.h"
-// #include "sidorova.h"
+#include "Kunshikov.h"
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
 using namespace std;
 int main() {
@@ -15,8 +12,11 @@ int choice;
 do {
 cout << "\n=== Командный проект: сборник расчётов ===\n";
 // === БЛОК МЕНЮ: каждый участник добавляет свои пункты ===
+  
 cout << "1. Перевести километры в мили\n";
 cout << "2. Перевести мили в километры\n";
+cout << "3. Вычисление себестоимости\n";
+cout << "4. Вычисление цены с наценкой\n";
 // === КОНЕЦ БЛОКА МЕНЮ ===
 cout << "0. Выход\n";
 cout << "Выберите пункт: ";
@@ -35,13 +35,25 @@ case 2:
     cin >> mi;
     cout << milesToKm(mi) << endl;
     break;
+case 3:
+  int total, n;
+  std::cout << "Введите общие затраты и количество единиц: ";
+  std::cin >> total >> n;
+  unitCost(total, n);
+  break;
+case 4:
+  int cost, markup;
+  std::cout << "Введите себестоимость и процент наценки: ";
+  std::cin >> cost >> markup;
+  priceWithMarkup(cost, markup);
+  break;
 // === КОНЕЦ БЛОКА ОБРАБОТКИ ===
 case 0:
-cout << "Работа завершена.\n";
-break;
+  cout << "Работа завершена.\n";
+  break;
 default:
-cout << "Такого пункта нет.\n";
-}
+  cout << "Такого пункта нет.\n";
+  }
 } while (choice != 0);
 return 0;
 }
