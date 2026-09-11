@@ -5,6 +5,7 @@
 // #include "ivanov.h"
 // #include "petrov.h"
 // #include "sidorova.h"
+#include "Kunshikov.h"
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
 using namespace std;
 int main() {
@@ -13,13 +14,26 @@ do {
 cout << "\n=== Командный проект: сборник расчётов ===\n";
 // === БЛОК МЕНЮ: каждый участник добавляет свои пункты ===
 
+cout << "3. Вычисление себестоимости\n";
+cout << "4. Вычисление цены с наценкой\n";
 // === КОНЕЦ БЛОКА МЕНЮ ===
 cout << "0. Выход\n";
 cout << "Выберите пункт: ";
 cin >> choice;
 switch (choice) {
 // === БЛОК ОБРАБОТКИ: каждый участник добавляет свои case ===
-
+case 3:
+int total, n;
+std::cout << "Введите общие затраты и количество единиц: ";
+std::cin >> total >> n;
+unitCost(total, n);
+break;
+case 4:
+int cost, markup;
+std::cout << "Введите себестоимость и процент наценки: ";
+std::cin >> cost >> markup;
+priceWithMarkup(cost, markup);
+break;
 // === КОНЕЦ БЛОКА ОБРАБОТКИ ===
 case 0:
 cout << "Работа завершена.\n";
